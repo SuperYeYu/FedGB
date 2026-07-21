@@ -1,0 +1,18 @@
+config = {
+    "fedgraph_num_neighbors": 5,
+    "fedgraph_target_top_k": 5,
+    "fedgraph_target_threshold": 0.0,
+    "fedgraph_keep_original_edges": True,
+    "fedgraph_cross_cluster_weight": 0.03,
+    "fedgraph_total_epsilon": float("inf"),
+    "fedgraph_min_epsilon_ratio": 0.2,
+    "fedgraph_noise": True,
+    "fedgraph_local_model_lr": 0.01,
+    "fedgraph_local_model_weight_decay": 0.0001,
+    "fedgraph_local_model_epochs": 2,
+    "fedgraph_clr_max_iter": 30,
+    "fedgraph_sensitivity_removals": 1,
+    "fedgraph_sensitivity_noise_scale": 0.1,
+    "fedgraph_reallocate_by_label": True,
+    "fedgraph_use_supervised_global_pseudo": False,
+}

@@ -1,0 +1,18 @@
+config = {
+    "trigger_size": 4,
+    "threshold": 0.5,
+    "attack_client_frac": 0.0,
+    "target_label": 0,
+    "num_layers": 5,
+    "num_mlp_layers": 2,
+    "hidden_dim": 64,
+    "dropout": 0.5,
+    "graph_pooling_type": "average",
+    "learn_eps": False,
+    "gtn_layernum": 3,
+    "topo_threshold": 0.5,
+    "feat_threshold": 0.0,
+    "generator_lr": 0.01,
+    "generator_alpha": 1.0,
+    "num_backdoor_train_graphs": 1,
+}

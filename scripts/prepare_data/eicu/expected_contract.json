@@ -1,0 +1,22 @@
+{
+  "source_database": "eICU Collaborative Research Database v2.0",
+  "num_clients": 40,
+  "num_stays": 116383,
+  "num_patients": 79294,
+  "feature_dim": 315,
+  "num_classes": 3,
+  "num_tasks": 1,
+  "class_counts": {"0": 86433, "1": 20628, "2": 9322},
+  "split_counts": {"train": 5825, "val": 17455, "test": 93103},
+  "heterogeneous": {
+    "num_unique_nodes": 202997,
+    "num_node_types": 5,
+    "num_directed_relation_types": 8,
+    "num_forward_semantic_edges": 6486909
+  },
+  "homogeneous": {
+    "num_nodes": 116383,
+    "num_undirected_edges": 105210981,
+    "shared_concept_threshold": 3
+  }
+}

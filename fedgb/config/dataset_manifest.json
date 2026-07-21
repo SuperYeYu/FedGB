@@ -1,0 +1,24 @@
+{
+  "version": 4,
+  "schema_version": "1.0",
+  "variants": [
+    {"name":"EICU-Het","source_group":"EICU","level":"hetero_subgraph","task":"node_cls","num_clients":40,"dataset_id":"ACM","target_node":"stay","feature_dim":315,"num_classes":3,"num_tasks":1,"availability":"credentialed_build","builder":"scripts/prepare_data/eicu/README.md","schema_version":"1.0"},
+    {"name":"EICU-Hom","source_group":"EICU","level":"homo_subgraph","task":"node_cls","num_clients":40,"dataset_id":"ACM","feature_dim":315,"num_classes":3,"num_tasks":1,"availability":"credentialed_build","builder":"scripts/prepare_data/eicu/README.md","schema_version":"1.0"},
+    {"name":"ICIJ-Het","source_group":"ICIJ","level":"hetero_subgraph","task":"node_cls","num_clients":20,"dataset_id":"ACM","target_node":"entity","feature_dim":272,"availability":"download","schema_version":"1.0"},
+    {"name":"ICIJ-Hom","source_group":"ICIJ","level":"homo_subgraph","task":"node_cls","num_clients":20,"dataset_id":"ACM","feature_dim":272,"availability":"download","schema_version":"1.0"},
+    {"name":"ICIJ-Het-Cross","source_group":"ICIJ","level":"hetero_subgraph","task":"node_cls","num_clients":20,"dataset_id":"ACM","target_node":"entity","feature_dim":272,"availability":"download","schema_version":"1.0"},
+    {"name":"ICIJ-Hom-Cross","source_group":"ICIJ","level":"homo_subgraph","task":"node_cls","num_clients":20,"dataset_id":"ACM","feature_dim":272,"availability":"download","schema_version":"1.0"},
+    {"name":"AML-HI","source_group":"AML-HI","level":"homo_subgraph","task":"node_cls","num_clients":29,"dataset_id":"ACM","feature_dim":9,"availability":"download","schema_version":"1.0"},
+    {"name":"AML-HI-Cross","source_group":"AML-HI","level":"homo_subgraph","task":"node_cls","num_clients":29,"dataset_id":"ACM","feature_dim":9,"availability":"download","schema_version":"1.0"},
+    {"name":"XS-Video","source_group":"XS-Video","level":"homo_subgraph","task":"node_cls","num_clients":5,"dataset_id":"ACM","feature_dim":792,"availability":"download","schema_version":"1.0"},
+    {"name":"PubChem","source_group":"PubChem","level":"graph","task":"graph_cls","num_clients":13,"dataset_id":"PUBCHEM_FGL","feature_dim":19,"edge_feature_dim":16,"availability":"download","schema_version":"1.0"},
+    {"name":"TCGA","source_group":"TCGA","level":"graph","task":"graph_cls","num_clients":27,"dataset_id":"NOMAD_FGL","feature_dim":64,"num_tasks":5,"availability":"download","schema_version":"1.0"},
+    {"name":"TCGA-S1","source_group":"TCGA","level":"graph","task":"graph_cls","num_clients":17,"dataset_id":"NOMAD_FGL","feature_dim":64,"task_name":"clinical stage","availability":"download","schema_version":"1.0"},
+    {"name":"TCGA-S2","source_group":"TCGA","level":"graph","task":"graph_cls","num_clients":4,"dataset_id":"NOMAD_FGL","feature_dim":64,"task_name":"tumor grade","availability":"download","schema_version":"1.0"},
+    {"name":"TCGA-S3","source_group":"TCGA","level":"graph","task":"graph_cls","num_clients":4,"dataset_id":"NOMAD_FGL","feature_dim":64,"task_name":"progression/recurrence","availability":"download","schema_version":"1.0"},
+    {"name":"NOMAD","source_group":"NOMAD","level":"graph","task":"graph_reg","num_clients":6,"dataset_id":"NOMAD_FGL","feature_dim":16,"availability":"download","schema_version":"1.0"},
+    {"name":"OPTIMADE","source_group":"OPTIMADE","level":"graph","task":"graph_reg","num_clients":8,"dataset_id":"NOMAD_FGL","feature_dim":12,"edge_feature_dim":24,"num_targets":19,"masked_targets":true,"availability":"download","schema_version":"1.0"},
+    {"name":"OPTIMADE-S1","source_group":"OPTIMADE","level":"graph","task":"graph_reg","num_clients":4,"dataset_id":"NOMAD_FGL","feature_dim":12,"edge_feature_dim":24,"task_name":"thermodynamic stability","availability":"download","schema_version":"1.0"},
+    {"name":"OPTIMADE-S2","source_group":"OPTIMADE","level":"graph","task":"graph_reg","num_clients":3,"dataset_id":"NOMAD_FGL","feature_dim":12,"edge_feature_dim":24,"task_name":"band gap","availability":"download","schema_version":"1.0"}
+  ]
+}

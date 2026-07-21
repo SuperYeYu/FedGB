@@ -1,0 +1,15 @@
+config = {
+    "num_factors": 2,
+    "n_latentdims": 128,
+    "n_layers": 4,
+    "n_routit": 6,
+    "dropout": 0.3,
+    "norm_scale": 10.0,
+    "similarity_norm": "exp",
+    "hvae_epochs": 1,
+    "hvae_lr": 0.001,
+    "hvae_weight_decay": 1e-6,
+    "hvae_negative_ratio": 1.0,
+    "hvae_max_edges": 200000,
+    "edge_chunk_size": 200000,
+}

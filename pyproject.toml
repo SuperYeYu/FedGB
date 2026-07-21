@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fedgb"
+version = "1.0.0"
+description = "A benchmark library for federated graph learning"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { file = "LICENSE" }
+dependencies = [
+  "cytoolz",
+  "fvcore",
+  "munkres",
+  "networkx",
+  "numpy",
+  "ogb",
+  "pandas",
+  "scikit-learn",
+  "scikit-network",
+  "scipy",
+  "torch",
+  "torch-geometric",
+  "tqdm",
+  "zstandard",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["fedgb"]

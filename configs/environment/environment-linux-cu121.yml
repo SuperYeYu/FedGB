@@ -1,0 +1,11 @@
+name: fedgb
+channels:
+  - pytorch
+  - nvidia
+  - pyg
+  - conda-forge
+dependencies:
+  - python=3.12.13
+  - pip
+  - pip:
+      - -r requirements-linux-cu121.txt

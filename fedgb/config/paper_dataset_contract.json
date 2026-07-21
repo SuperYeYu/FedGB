@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "scope": "FedGB paper dataset contract",
+  "variants": [
+    {"name":"EICU-Het","level":"hetero_subgraph","availability":"credentialed_build","num_clients":40,"num_tasks":1,"num_classes":3,"task_name":"length-of-stay prediction","feature_dim":315,"num_node_types":5,"num_relation_types":8,"num_stays":116383,"num_patients":79294,"num_unique_nodes":202997,"num_semantic_edges":6486909,"split":{"train":0.05,"val":0.15,"test":0.80,"seed":42}},
+    {"name":"EICU-Hom","level":"homo_subgraph","availability":"credentialed_build","num_clients":40,"num_tasks":1,"num_classes":3,"task_name":"length-of-stay prediction","feature_dim":315,"num_nodes":116383,"num_undirected_edges":105210981,"split":{"train":0.05,"val":0.15,"test":0.80,"seed":42}},
+    {"name":"ICIJ-Het","level":"hetero_subgraph","availability":"download","num_clients":20,"num_tasks":1,"feature_dim":272},
+    {"name":"ICIJ-Hom","level":"homo_subgraph","availability":"download","num_clients":20,"num_tasks":1,"feature_dim":272},
+    {"name":"ICIJ-Het-Cross","level":"hetero_subgraph","availability":"download","num_clients":20,"num_tasks":1,"feature_dim":272},
+    {"name":"ICIJ-Hom-Cross","level":"homo_subgraph","availability":"download","num_clients":20,"num_tasks":1,"feature_dim":272},
+    {"name":"AML-HI","level":"homo_subgraph","availability":"download","num_clients":29,"num_tasks":1,"feature_dim":9},
+    {"name":"AML-HI-Cross","level":"homo_subgraph","availability":"download","num_clients":29,"num_tasks":1,"feature_dim":9},
+    {"name":"XS-Video","level":"homo_subgraph","availability":"download","num_clients":5,"num_tasks":1,"feature_dim":792},
+    {"name":"PubChem","level":"graph","availability":"download","num_clients":13,"num_graphs":30525,"num_tasks":1,"feature_dim":19,"edge_feature_dim":16,"avg_nodes":26.23},
+    {"name":"TCGA","level":"graph","availability":"download","num_clients":27,"num_graphs":293786,"num_tasks":5,"feature_dim":64,"avg_nodes":90.19},
+    {"name":"TCGA-S1","level":"graph","availability":"download","num_clients":17,"num_graphs":160750,"num_tasks":1,"task_name":"clinical stage","feature_dim":64,"avg_nodes":94.04},
+    {"name":"TCGA-S2","level":"graph","availability":"download","num_clients":4,"num_graphs":35719,"num_tasks":1,"task_name":"tumor grade","feature_dim":64,"avg_nodes":85.62},
+    {"name":"TCGA-S3","level":"graph","availability":"download","num_clients":4,"num_graphs":40116,"num_tasks":1,"task_name":"progression/recurrence","feature_dim":64,"avg_nodes":83.88},
+    {"name":"NOMAD","level":"graph","availability":"download","num_clients":6,"num_graphs":90972,"num_tasks":1,"feature_dim":16,"avg_nodes":10.35},
+    {"name":"OPTIMADE","level":"graph","availability":"download","num_clients":8,"num_graphs":104775,"num_target_fields":19,"num_task_families":2,"feature_dim":12,"edge_feature_dim":24},
+    {"name":"OPTIMADE-S1","level":"graph","availability":"download","num_clients":4,"num_tasks":1,"task_name":"thermodynamic stability","feature_dim":12,"edge_feature_dim":24},
+    {"name":"OPTIMADE-S2","level":"graph","availability":"download","num_clients":3,"num_tasks":1,"task_name":"band gap","feature_dim":12,"edge_feature_dim":24}
+  ]
+}

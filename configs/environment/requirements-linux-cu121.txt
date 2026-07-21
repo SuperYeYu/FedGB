@@ -1,0 +1,15 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1+cu121
+torch-geometric==2.8.0
+cytoolz==1.1.0
+munkres==1.1.4
+networkx==3.6.1
+numpy==2.4.4
+pandas==3.0.3
+scikit-learn==1.9.0
+scikit-network==0.33.5
+scipy==1.18.0
+tqdm==4.68.3
+zstandard==0.25.0
+fvcore
+ogb

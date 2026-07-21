@@ -1,0 +1,642 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "fedala__homo_subgraph__node_cls",
+      "algorithm": "fedala",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedala__hetero_subgraph__node_cls",
+      "algorithm": "fedala",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "fedala__graph__graph_cls",
+      "algorithm": "fedala",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedala__graph__graph_reg",
+      "algorithm": "fedala",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "fedavg__homo_subgraph__node_cls",
+      "algorithm": "fedavg",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedavg__hetero_subgraph__node_cls",
+      "algorithm": "fedavg",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "fedavg__graph__graph_cls",
+      "algorithm": "fedavg",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedavg__graph__graph_reg",
+      "algorithm": "fedavg",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "feddc__homo_subgraph__node_cls",
+      "algorithm": "feddc",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "feddc__hetero_subgraph__node_cls",
+      "algorithm": "feddc",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "feddc__graph__graph_cls",
+      "algorithm": "feddc",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "feddc__graph__graph_reg",
+      "algorithm": "feddc",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "fedexp__homo_subgraph__node_cls",
+      "algorithm": "fedexp",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedexp__hetero_subgraph__node_cls",
+      "algorithm": "fedexp",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "fedexp__graph__graph_cls",
+      "algorithm": "fedexp",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedexp__graph__graph_reg",
+      "algorithm": "fedexp",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "fedlaw__homo_subgraph__node_cls",
+      "algorithm": "fedlaw",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedlaw__hetero_subgraph__node_cls",
+      "algorithm": "fedlaw",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "fedlaw__graph__graph_cls",
+      "algorithm": "fedlaw",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedlaw__graph__graph_reg",
+      "algorithm": "fedlaw",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "fedluar__homo_subgraph__node_cls",
+      "algorithm": "fedluar",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedluar__hetero_subgraph__node_cls",
+      "algorithm": "fedluar",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "fedluar__graph__graph_cls",
+      "algorithm": "fedluar",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedluar__graph__graph_reg",
+      "algorithm": "fedluar",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "fedproto__homo_subgraph__node_cls",
+      "algorithm": "fedproto",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedproto__hetero_subgraph__node_cls",
+      "algorithm": "fedproto",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "fedproto__graph__graph_cls",
+      "algorithm": "fedproto",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedproto__graph__graph_reg",
+      "algorithm": "fedproto",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "fedprox__homo_subgraph__node_cls",
+      "algorithm": "fedprox",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedprox__hetero_subgraph__node_cls",
+      "algorithm": "fedprox",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "fedprox__graph__graph_cls",
+      "algorithm": "fedprox",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedprox__graph__graph_reg",
+      "algorithm": "fedprox",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "fedtgp__homo_subgraph__node_cls",
+      "algorithm": "fedtgp",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedtgp__hetero_subgraph__node_cls",
+      "algorithm": "fedtgp",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "fedtgp__graph__graph_cls",
+      "algorithm": "fedtgp",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedtgp__graph__graph_reg",
+      "algorithm": "fedtgp",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "feroma__homo_subgraph__node_cls",
+      "algorithm": "feroma",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "feroma__hetero_subgraph__node_cls",
+      "algorithm": "feroma",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "feroma__graph__graph_cls",
+      "algorithm": "feroma",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "feroma__graph__graph_reg",
+      "algorithm": "feroma",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "moon__homo_subgraph__node_cls",
+      "algorithm": "moon",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "moon__hetero_subgraph__node_cls",
+      "algorithm": "moon",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "moon__graph__graph_cls",
+      "algorithm": "moon",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "moon__graph__graph_reg",
+      "algorithm": "moon",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "pfed1bs__homo_subgraph__node_cls",
+      "algorithm": "pfed1bs",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "pfed1bs__hetero_subgraph__node_cls",
+      "algorithm": "pfed1bs",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "pfed1bs__graph__graph_cls",
+      "algorithm": "pfed1bs",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "pfed1bs__graph__graph_reg",
+      "algorithm": "pfed1bs",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "scaffold__homo_subgraph__node_cls",
+      "algorithm": "scaffold",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "scaffold__hetero_subgraph__node_cls",
+      "algorithm": "scaffold",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "scaffold__graph__graph_cls",
+      "algorithm": "scaffold",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "scaffold__graph__graph_reg",
+      "algorithm": "scaffold",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "tinyproto__homo_subgraph__node_cls",
+      "algorithm": "tinyproto",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "tinyproto__hetero_subgraph__node_cls",
+      "algorithm": "tinyproto",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "tinyproto__graph__graph_cls",
+      "algorithm": "tinyproto",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "tinyproto__graph__graph_reg",
+      "algorithm": "tinyproto",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "adafgl__homo_subgraph__node_cls",
+      "algorithm": "adafgl",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "cufl__homo_subgraph__node_cls",
+      "algorithm": "cufl",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedda__hetero_subgraph__node_cls",
+      "algorithm": "fedda",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "feddep__homo_subgraph__node_cls",
+      "algorithm": "feddep",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedgta__homo_subgraph__node_cls",
+      "algorithm": "fedgta",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedhgn__hetero_subgraph__node_cls",
+      "algorithm": "fedhgn",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "fediih__homo_subgraph__node_cls",
+      "algorithm": "fediih",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedlit__hetero_subgraph__node_cls",
+      "algorithm": "fedlit",
+      "scenario": "hetero_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HETERO"
+    },
+    {
+      "id": "fedlog__homo_subgraph__node_cls",
+      "algorithm": "fedlog",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedppn__homo_subgraph__node_cls",
+      "algorithm": "fedppn",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedpub__homo_subgraph__node_cls",
+      "algorithm": "fedpub",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedrgl__homo_subgraph__node_cls",
+      "algorithm": "fedrgl",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedsage_plus__homo_subgraph__node_cls",
+      "algorithm": "fedsage_plus",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedspray__homo_subgraph__node_cls",
+      "algorithm": "fedspray",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedstruct__homo_subgraph__node_cls",
+      "algorithm": "fedstruct",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedtad__homo_subgraph__node_cls",
+      "algorithm": "fedtad",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fggp__homo_subgraph__node_cls",
+      "algorithm": "fggp",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fgssl__homo_subgraph__node_cls",
+      "algorithm": "fgssl",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "hifgl__homo_subgraph__node_cls",
+      "algorithm": "hifgl",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "s2fgl__homo_subgraph__node_cls",
+      "algorithm": "s2fgl",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "spp_fgc__homo_subgraph__node_cls",
+      "algorithm": "spp_fgc",
+      "scenario": "homo_subgraph",
+      "task": "node_cls",
+      "dataset": "SMOKE-HOMO"
+    },
+    {
+      "id": "fedgmark__graph__graph_cls",
+      "algorithm": "fedgmark",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedgmark__graph__graph_reg",
+      "algorithm": "fedgmark",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "fedssp__graph__graph_cls",
+      "algorithm": "fedssp",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedssp__graph__graph_reg",
+      "algorithm": "fedssp",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "fedstar__graph__graph_cls",
+      "algorithm": "fedstar",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedstar__graph__graph_reg",
+      "algorithm": "fedstar",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "fedvn__graph__graph_cls",
+      "algorithm": "fedvn",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "fedvn__graph__graph_reg",
+      "algorithm": "fedvn",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "gcfl_plus__graph__graph_cls",
+      "algorithm": "gcfl_plus",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "gcfl_plus__graph__graph_reg",
+      "algorithm": "gcfl_plus",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "nigdba__graph__graph_cls",
+      "algorithm": "nigdba",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "nigdba__graph__graph_reg",
+      "algorithm": "nigdba",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    },
+    {
+      "id": "optgdba__graph__graph_cls",
+      "algorithm": "optgdba",
+      "scenario": "graph",
+      "task": "graph_cls",
+      "dataset": "SMOKE-GRAPH-CLS"
+    },
+    {
+      "id": "optgdba__graph__graph_reg",
+      "algorithm": "optgdba",
+      "scenario": "graph",
+      "task": "graph_reg",
+      "dataset": "SMOKE-GRAPH-REG"
+    }
+  ]
+}

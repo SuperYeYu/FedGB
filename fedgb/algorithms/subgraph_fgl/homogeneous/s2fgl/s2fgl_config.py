@@ -1,0 +1,16 @@
+config = {
+    "s2fgl_codebook_slots": 4,
+    "s2fgl_fgma_top_k": 10,
+    "s2fgl_fgma_similarity_top_k": 3,
+    "s2fgl_fgma_weight": 1.0,
+    "s2fgl_important_ratio": 1 / 3,
+    "s2fgl_k_important_ratio": 0.2,
+    "s2fgl_kd_lamb": 100.0,
+    "s2fgl_kd_weight": 0.05,
+    "s2fgl_model_dropout": 0.1,
+    "s2fgl_ppr_alpha": 0.85,
+    "s2fgl_ppr_iters": 20,
+    "s2fgl_max_important_nodes": 4096,
+    "s2fgl_max_k_important_nodes": 512,
+    "s2fgl_temperature": 1.0,
+}

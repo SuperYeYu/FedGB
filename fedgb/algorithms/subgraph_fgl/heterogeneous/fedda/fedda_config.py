@@ -1,0 +1,16 @@
+config = {
+    "active_rate": 1.0,
+    "client_threshold": 0.5,
+    "round_threshold": 0.3,
+    "aggregate_all": False,
+    "partially_return": True,
+    "remove_client": True,
+    "explore": True,
+    "dynamic_keywords": ["attn_l", "attn_r", "attn_e", "edge_emb", "decoder", "fc_list"],
+    "edge_dim": 32,
+    "num_heads": 3,
+    "attn_dropout": None,
+    "negative_slope": 0.2,
+    "residual": False,
+    "residual_attention_alpha": 0.0,
+}
