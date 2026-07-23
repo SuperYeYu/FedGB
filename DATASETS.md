@@ -23,19 +23,6 @@ FedGB uses eight data sources and 18 benchmark variants. Sixteen processed varia
 | Graph | OPTIMADE-S1 | 4 | Thermodynamic stability regression | 12 node / 24 edge | Download |
 | Graph | OPTIMADE-S2 | 3 | Band-gap regression | 12 node / 24 edge | Download |
 
-## Dataset Statistics
-
-| Variant | Clients | Graphs | Avg. nodes | Tasks |
-|---|---:|---:|---:|---:|
-| PubChem | 13 | 30,525 | 26.23 | 1 |
-| TCGA | 27 | 293,786 | 90.19 | 5 |
-| TCGA-S1 | 17 | 160,750 | 94.04 | 1 |
-| TCGA-S2 | 4 | 35,719 | 85.62 | 1 |
-| TCGA-S3 | 4 | 40,116 | 83.88 | 1 |
-| NOMAD | 6 | 90,972 | 10.35 | 1 |
-| OPTIMADE | 8 | 104,775 | provider-dependent | 19 target fields across 2 task families |
-
-TCGA contains 293,786 graphs across 27 clients and five tasks. `TCGA-S2` is the four-client tumor-grade subset, while `TCGA-S3` is the four-client progression/recurrence subset. These definitions are enforced by `fedgb/config/paper_dataset_contract.json`.
 
 ## EICU Credentialed Build
 
@@ -43,28 +30,6 @@ FedGB does not redistribute raw eICU records, intermediate patient-level files, 
 
 The validated build has 40 hospital clients, 116,383 ICU stays, 79,294 patients, one three-class length-of-stay task, and 315-dimensional features. Splits are class-stratified at the patient level within each hospital client using 5% train, 15% validation, and 80% test with seed 42. Discharge-related stay features are excluded. EICU-Het contains five node types and eight directed relation types; EICU-Hom contains stay nodes connected through shared treatment and medication concepts.
 
-TCGA and all TCGA single-task variants use PCA-64 node features. PubChem uses 19-dimensional atom features and 16-dimensional edge features. Dataset validation rejects graphs whose node feature dimensions do not match the registered contract.
-
-The full OPTIMADE variant uses eight natural provider clients in this fixed order:
-
-| Client | Provider | Graphs | Avg. nodes | Avg. edges | Active targets |
-|---:|---|---:|---:|---:|---:|
-| 0 | alexandria_pbe | 30,000 | 10.24 | 72.11 | 5 |
-| 1 | alexandria_pbesol | 14,159 | 8.00 | 49.94 | 7 |
-| 2 | matterverse | 22,894 | 25.79 | 205.81 | 0 |
-| 3 | mp | 8,073 | 30.78 | 242.70 | 3 |
-| 4 | mpdd | 7,500 | 8.59 | 58.16 | 4 |
-| 5 | nmd | 4,598 | 23.02 | 182.50 | 0 |
-| 6 | oqmd | 11,200 | 8.16 | 54.10 | 5 |
-| 7 | twodmatpedia | 6,351 | 10.44 | 74.77 | 0 |
-
-Every OPTIMADE graph has `y` and `y_mask` tensors with shape `[1, 19]`. `y_mask` identifies observed targets, so missing labels are never optimized as zero-valued labels. Matterverse, NMD, and 2DMatPedia are unlabeled clients with all-false masks. The dataset uses fixed 80/10/10 graph splits. `OPTIMADE-S1` and `OPTIMADE-S2` provide scalar-task subsets for thermodynamic-stability and band-gap experiments.
-
-The table reports statistics to two decimal places. Direct aggregation from the serialized graph tensors can differ by `0.01` in the last displayed digit for a small number of clients; graph counts, provider order, and target counts are exact.
-
-Each directory contains only the processed global data, client `data_i.pt` files, fixed train/validation/test splits, and `fedgb_manifest.json`. Raw source data, tuning outputs, algorithm caches, and training outputs are excluded.
-
-All public variants use `schema_version: "1.0"`. The authoritative machine-readable mapping is `fedgb/config/dataset_manifest.json`.
 
 ## Unified Schemas
 
