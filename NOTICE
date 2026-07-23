@@ -1,9 +1,2 @@
-FedGB includes software derived from OpenFGL, originally distributed under the MIT License.
 
-Upstream project: OpenFGL
-Upstream repository: https://github.com/xkLi-Allen/OpenFGL
-
-FedGB changes include benchmark datasets and loaders, graph regression support, heterogeneous PyTorch Geometric pipelines, additional baseline implementations and adaptations, unified scenario entry points, task-aware metrics, logging, communication-cost reporting, and release verification tooling.
-
-The OpenFGL authors do not endorse or certify this derived distribution.
 
