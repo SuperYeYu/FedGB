@@ -94,7 +94,7 @@ git clone https://github.com/SuperYeYu/FedGB.git
 cd FedGB
 ```
 
-2. Open the [FedGB dataset folder on Google Drive](https://drive.google.com/drive/folders/1EoSEs8UYkjR4Ve2RDqYxwbE-6pO9y9K7?usp=sharing) and download both files:
+2. Open the [FedGB dataset folder on Google Drive](https://drive.google.com/drive/folders/1qNTgaxc22nm_dPMDPdRLNeWhZR3FxwQX?usp=drive_link) and download both files:
 
 ```text
 FedGB-datasets-v1.0.0.tar.zst
