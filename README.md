@@ -1,4 +1,4 @@
-<h1><img src="assets/images/fedgb_picture.png" alt="FedGB" width="180" align="center"> A Real-World Federated Graph Benchmark from Simulated Partitions to Natural Client Scenarios</h1>
+<h1><img src="assets/images/fedgb_picture.png" alt="FedGB" width="180" align="center"> An Omni-scenario Benchmark for Federated Graph Learning</h1>
 
 FedGB is a benchmark and implementation library for federated graph learning. It provides a consistent PyTorch Geometric pipeline for comparing standard federated learning (FL) and federated graph learning (FGL) methods across homogeneous subgraph, heterogeneous subgraph, graph classification, and graph regression settings.
 
