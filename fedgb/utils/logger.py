@@ -72,7 +72,7 @@ class Logger:
             
             server_message = self.message_pool.get('server')
             if server_message is not None:
-                if self.personalized:
+                if self.personalized and not server_message.get("broadcast_to_sampled_clients", False):
                     comm_cost += total_size(server_message)
                 else:
                     comm_cost += len(self.message_pool['sampled_clients']) * total_size(server_message)
