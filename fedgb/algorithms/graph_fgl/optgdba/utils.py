@@ -35,7 +35,13 @@ def weighted_average_state_dicts(state_dicts, weights, device):
 
 
 def shared_parameter_names(model, task_name):
-    return [name for name, _ in model.named_parameters()]
+    return [
+        name for name, _ in model.named_parameters()
+        if not (
+            task_name in {"graph_cls", "graph_reg"}
+            and name.startswith("linears_prediction.")
+        )
+    ]
 
 
 def shared_parameter_payload(model, task_name):
