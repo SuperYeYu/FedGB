@@ -373,6 +373,10 @@ tests/                    unit and integration tests
 results/                  ignored runtime outputs
 ```
 
+## Update
+
+**01/10/2026** FedGB supports reporting client macro metrics.
+
 
 ## Citation, Acknowledgement, and License
 
