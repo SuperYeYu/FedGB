@@ -15,7 +15,7 @@ def _cfg(args, key):
 
 class OptGDBAServer(BaseServer):
     def __init__(self, args, global_data, data_dir, message_pool, device):
-        super(OptGDBAServer, self).__init__(args, global_data, data_dir, message_pool, device)
+        super(OptGDBAServer, self).__init__(args, global_data, data_dir, message_pool, device, personalized=True)
         self._apply_config_defaults()
         self.task.load_custom_model(build_optgdba_model(self.args, self.task))
         self.threshold = _cfg(args, "threshold")
@@ -49,6 +49,7 @@ class OptGDBAServer(BaseServer):
     def send_message(self):
         weight_names, weights = shared_parameter_payload(self.task.model, getattr(self.args, "task", None))
         self.message_pool["server"] = {
+            "broadcast_to_sampled_clients": True,
             "weight_names": weight_names,
             "weight": weights,
             "attack_config": {
