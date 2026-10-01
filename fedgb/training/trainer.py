@@ -155,6 +155,10 @@ class FGLTrainer:
         val_tot_samples = 0
         test_tot_samples = 0
         one_time_infer = False
+        client_metric_values = {
+            metric: {"val": [], "test": []}
+            for metric in self.args.metrics
+        }
         
         
         for client_id in range(self.args.num_clients):
@@ -178,6 +182,18 @@ class FGLTrainer:
                 result = self.server.task.evaluate()
             
             if self.args.task in ["graph_cls", "graph_reg", "node_cls", "link_pred"]:
+                for metric in self.args.metrics:
+                    for split in ("val", "test"):
+                        value = result.get(f"{metric}_{split}")
+                        observed = (
+                            result.get(f"num_observed_{split}", num_samples)
+                            if self.args.task == "graph_reg" else num_samples
+                        )
+                        if (
+                            observed and value is not None
+                            and torch.isfinite(torch.as_tensor(value))
+                        ):
+                            client_metric_values[metric][split].append(float(value))
                 val_loss = result.get("loss_val", result.get("mae_val"))
                 test_loss = result.get("loss_test", result.get("mae_test"))
                 if self.args.task == "graph_reg":
@@ -226,6 +242,16 @@ class FGLTrainer:
             for metric in self.args.metrics:
                 evaluation_result[f"current_val_{metric}"] /= val_denominator
                 evaluation_result[f"current_test_{metric}"] /= test_denominator
+                if not one_time_infer:
+                    for split in ("val", "test"):
+                        values = client_metric_values[metric][split]
+                        if not values:
+                            raise ValueError(
+                                f"No observed client {split} values for {metric}."
+                            )
+                        evaluation_result[f"current_{split}_client_macro_{metric}"] = (
+                            sum(values) / len(values)
+                        )
                 
             primary_metric = self.args.metrics[0]
             if self.args.task == "graph_reg":
@@ -238,6 +264,11 @@ class FGLTrainer:
                 for metric in self.args.metrics:
                     self.evaluation_result[f"best_val_{metric}"] = evaluation_result[f"current_val_{metric}"]
                     self.evaluation_result[f"best_test_{metric}"] = evaluation_result[f"current_test_{metric}"]
+                    if not one_time_infer:
+                        for split in ("val", "test"):
+                            self.evaluation_result[f"best_{split}_client_macro_{metric}"] = (
+                                evaluation_result[f"current_{split}_client_macro_{metric}"]
+                            )
                 self.evaluation_result[f"best_round"] = evaluation_result[f"current_round"]
             
             current_output = f"curr_round: {evaluation_result['current_round']}\t" + \
@@ -247,7 +278,21 @@ class FGLTrainer:
             best_output = f"best_round: {self.evaluation_result['best_round']}\t" + \
                 "\t".join([f"best_val_{metric}: {self.evaluation_result[f'best_val_{metric}']:.4f}\tbest_test_{metric}: {self.evaluation_result[f'best_test_{metric}']:.4f}" for metric in self.args.metrics]) + \
                 f"\tbest_val_loss: {self.evaluation_result['best_val_loss']:.4f}\tbest_test_loss: {self.evaluation_result['best_test_loss']:.4f}"
-    
+            if not one_time_infer:
+                for metric in self.args.metrics:
+                    for split in ("val", "test"):
+                        current_key = f"current_{split}_client_macro_{metric}"
+                        best_key = f"best_{split}_client_macro_{metric}"
+                        current_output += (
+                            f"\tcurr_{split}_client_macro_{metric}: "
+                            f"{evaluation_result[current_key]:.4f}"
+                        )
+                        if best_key in self.evaluation_result:
+                            best_output += (
+                                f"\tbest_{split}_client_macro_{metric}: "
+                                f"{self.evaluation_result[best_key]:.4f}"
+                            )
+
             print(current_output)
             print(best_output)
         else:
