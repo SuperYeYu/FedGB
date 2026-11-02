@@ -377,6 +377,8 @@ results/                  ignored runtime outputs
 
 **01/10/2026** FedGB supports reporting client macro metrics.
 
+Tips: [finacial graph](https://arxiv.org/pdf/2608.15177)
+
 
 ## Citation, Acknowledgement, and License
 
